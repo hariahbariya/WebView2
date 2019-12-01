@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refresh_bar"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_marginTop="-3dp"
+        android:progress="20"
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+
+    <WebView
+        android:id="@+id/webview_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="295dp"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/Error_image"
+            android:src="@drawable/ointernet"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"/>
+
+        <TextView
+            android:id="@+id/Error_textview"
+            android:layout_below="@id/Error_image"
+            android:layout_marginTop="5dp"
+            android:textSize="30dp"
+            android:text="No Internet Connection"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/button_check_internet"
+            android:textColor="#fff"
+            android:background="@drawable/btn_bg"
+            android:textSize="15dp"
+            android:text="retry"
+            android:padding="10sp"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/Error_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
